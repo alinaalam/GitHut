@@ -20,4 +20,15 @@ class GitHutController extends Controller {
     public function githutAction(Request $request) {
         return $this->render('githut/index.html.twig');
     }
+
+    /**
+     * @Route("/profile", name="profile")
+     */
+    public function profileAction(Request $request) {
+        return $this->render('githut/profile.html.twig', [
+            'avatar_url'    => 'https://avatars2.githubusercontent.com/u/12968163?v=4',
+            'name'          => 'Code Review Videos',
+            'login'         => 'codereviewvideos'
+        ]);
+    }
 }
